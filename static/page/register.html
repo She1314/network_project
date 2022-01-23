@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="html1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/register.css"/>
+    <script src="/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="flexBlock">
+<script src="/static/js/logo.js"></script>
+<div class="header ">
+    <div class="headerMain  ">
+        <img src="/static/images/logo_chzu.png" alt="logo">
+    </div>
+</div>
+<!-- 注册框 -->
+
+<div class="main  ">
+    <div class="centerCon flexBlock">
+        <div class="flex1 ">
+            <div class="themeBox"></div>
+        </div>
+        <div class="login_content ">
+            <div class="login_area">
+                <div class="login_name">
+                    <span class="login_title">账户注册</span>
+                </div>
+                <div class="userDiv">
+                    <p class="inputP user ">
+                        <input type="text" id="userName" name="userName" placeholder="请输入您的手机号"/>
+                    </p>
+                    <p class="helpBolck "></p>
+                </div>
+                <div class="passwordDiv">
+                    <p class="inputP password">
+                        <input type="text" id="password" name="password" placeholder="请输入您的密码"/>
+                    </p>
+                    <p class="helpBolck"></p>
+                </div>
+                <div class="radioDiv">
+                    <p class=" checkboxP">
+                        <span class="checkBox"></span>
+                        <span class="remeberPass"> 记住密码</span>
+                    </p>
+                </div>
+                <div class="code">
+                    <p class="inputP code">
+                        <input type="text" id="image_code" name="image_code" placeholder="请输入验证码"/>
+
+                    </p>
+                    <input type="button" id="send" name="send" value="发送验证码">
+                </div>
+
+                <div class="login-btn">
+                    <button class="login" id="login">注册</button>
+                </div>
+
+            </div>
+            <div class="suggestDiv">建议IE10+/chrome/firefox/360极速浏览器</div>
+
+        </div>
+    </div>
+
+
+</div>
+<div class="footer ">
+    <p class="footerText">技术支持归2021本大创团队所有</p>
+</div>
+
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var send = document.getElementById('send'),
+            times = 60,
+            timer = null;
+        send.onclick = function () {
+            // 计时开始
+            var that = this;
+            this.disabled = true;
+            timer = setInterval(function () {
+                times--;
+                that.value = times + "秒后重试";
+                if (times <= 0) {
+                    that.disabled = false;
+                    that.value = "发送验证码";
+                    clearInterval(timer);
+                    times = 60;
+                }
+                //console.log(times);
+            }, 1000);
+        }
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>数据可视化项目</title>
+    <link rel="stylesheet" href="/static/fonts/icomoon.css"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/flexible.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/v6.10.0-dist/ol.css"/>
+    <script src="/static/v6.10.0-dist/ol.js"></script>
+
+</head>
+
+<body>
+<!-- 父容器大盒子 -->
+<div class="viewport">
+    <div class="column">
+        <!-- 概览区域模块制作 -->
+        <a href="javascript:void(0)">
+            <div class="panel overview1">
+                <div class="inner" id="three">
+                    <div class="com-sel">
+                        <select id="name" class="com-opt">
+                            <option class="icon-dot" value="shj" style="color: #9a00ff">
+                                沙河集水库
+                            </option>
+                            <option class="icon-dot" value="hls" style="color: #9a00ff">
+                                黄栗树水库
+                            </option>
+                            <option class="icon-dot" value="cx" style="color: #9a00ff">
+                                城西水库
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </a>
+        <a href="javascript:void(0)" id="hot">
+            <div class="panel overview2">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: rgba(234,21,21,0.9); font-size: 16px; line-height: 20px">
+                        热力展示</h4>
+                </div>
+            </div>
+        </a>
+        <div class="panel overview" style="margin-top: 35px">
+            <div class="inner">
+                <ul id="information">
+                </ul>
+            </div>
+        </div>
+        <!-- 监控区域模块制作 -->
+        <div class="panel monitor">
+            <div class="inner">
+                <div class="tabs">
+                    <a href="javascript:void(0)" class="active" id="evapotranspiration">蒸散发对比</a>
+                    <a href="javascript:void(0)" id="run-off"><span>地下径流对主河道总径流的贡献量</span></a>
+                </div>
+                <div class="content" style="display: block;" id="Reservoir_name">
+
+                </div>
+            </div>
+        </div>
+        <!-- 土地分布统计模块制作 -->
+        <div class="point panel">
+            <div class="inner">
+                <h3>土地类型统计
+                    <label style="font-size: 16px">
+                        年份选择
+                        <select id="sumyear">
+                            <option value="2000">2000</option>
+                            <option value="2010">2010</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </label>
+                </h3>
+                <div class="chart">
+                    <div class="data" id="land">
+                    </div>
+                    <div class="pie"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <!-- 地图模块 -->
+        <div class="map">
+            <h3>
+                <span class="icon-cube"></span>
+                地形图统计
+            </h3>
+            <div class="chart" id="map_chzu">
+
+            </div>
+        </div>
+        <!-- 降雨统计模块 -->
+        <div class="users panel">
+            <div class="inner">
+                <h3>子流域总降水(mm)</h3>
+                <div class="chart">
+                    <div class="bar"></div>
+                    <div class="data">
+                        <div class="item">
+                            <h4>120,899</h4>
+                            <span>
+                    <i class="icon-dot" style="color: #ed3f35"></i>
+                    用户总量
+                  </span>
+                        </div>
+                        <div class="item">
+                            <h4>248</h4>
+                            <span>
+                    <i class="icon-dot" style="color: #eacf19"></i>
+                    本月新增
+                  </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <!-- 订单 -->
+        <a href="">
+            <div class="panel overview3">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: #ffdb00; font-size: 18px; line-height: 20px">叁库对比</h4>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="panel overview4">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: #bb00ff; font-size: 18px; line-height: 20px">叁库对比</h4>
+                </div>
+            </div>
+        </a>
+        <div class="order panel" style="margin-top: 35px">
+            <div class="inner">
+                <!-- 筛选 -->
+                <div class="filter">
+                    <a href="javascript:void(0);" class="active" id="area_sub">面积对比</a>
+                    <a href="javascript:void(0);" id="sub_watershed">HRU</a>
+                    <a href="javascript:void(0);" id="Solar">辐射能</a>
+                    <a href="javascript:void(0);" id="salinity">盐分比</a>
+                </div>
+                <!-- 数据 -->
+                <div class="data" id="water_hru">
+                </div>
+            </div>
+        </div>
+
+        <!-- 养分输出模块 -->
+        <div class="sales panel">
+            <div class="inner">
+                <div class="caption">
+                    <h3>养分输出</h3>
+                    <a href="javascript:void(0);" class="active" id="np">子流域氮磷</a>
+                    <a href="javascript:void(0);" id="water">水储量</a>
+                    <a href="javascript:void(0);" id="Sediment_volume">水量和泥沙</a>
+                </div>
+                <div class="chart">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 渠道分布以及季度销售模块 -->
+        <div class="wrap">
+            <div class="channel panel">
+                <div class="inner">
+                    <h3>生化量对比
+                        <label style="font-size: 16px">
+                            月份选择
+                            <select id="mouth_rch">
+                                <option value="1">1月</option>
+                                <option value="2">2月</option>
+                                <option value="3">3月</option>
+                                <option value="4" selected>4月</option>
+                                <option value="5">5月</option>
+                                <option value="6">6月</option>
+                                <option value="9">9月</option>
+                                <option value="10">10月</option>
+                                <option value="11">11月</option>
+                                <option value="12">12月</option>
+                            </select>
+                        </label>
+                    </h3>
+
+                    <div class="data" id="radar">
+                        <div class="radar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="js/index.js"></script>
+<script src="/static/js/index_cx.js"></script>
+<script src="/static/js/index_shj.js"></script>
+</body>
+</html>

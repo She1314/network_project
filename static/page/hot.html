@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>数据可视化项目</title>
+    <link rel="stylesheet" href="/static/fonts/icomoon.css"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/flexible.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/v6.10.0-dist/ol.css"/>
+    <script src="/static/v6.10.0-dist/ol.js"></script>
+    <script src="/static/js/heatmap.js"></script>
+    <!--        <script type="text/javascript">-->
+    <!--            window.onload = function () {-->
+    <!--                map();-->
+    <!--            }-->
+    <!--        </script>-->
+
+</head>
+
+<body>
+
+<!-- 父容器大盒子 -->
+<div class="viewport">
+    <div class="column">
+        <!-- 概览区域模块制作 -->
+        <a href="/static/index.html">
+            <div class="panel overview1">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: #ffdb00; font-size: 18px; line-height: 20px">叁库对比</h4>
+                </div>
+
+            </div>
+        </a>
+        <a href="" id="hot_href">
+            <div class="panel overview2">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: rgba(234,21,21,0.9); font-size: 18px; line-height: 20px">热力展示</h4>
+                </div>
+            </div>
+        </a>
+        <!-- 点位分布统计模块制作 -->
+        <div class="point panel" style="width: 700px; height: 650px">
+            <div class="inner" id="reli">
+                <h3>热力图分析</h3>
+                <div class="chart" id="map" style="width: 600px; height: 600px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+        <!-- 订单 -->
+        <a href="">
+            <div class="panel overview1" style="margin-left: 265px;">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: #bb00ff; font-size: 18px; line-height: 20px">叁库对比</h4>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="panel overview4" style="margin-left: 534px;">
+                <div class="inner">
+                    <h4 class="icon-dot" style="color: #bb00ff; font-size: 18px; line-height: 20px">叁库对比</h4>
+                </div>
+            </div>
+        </a>
+        <!-- 可视化 -->
+        <div class="point panel" style="width: 700px; height: 650px">
+            <div class="inner">
+                <label for="three">
+
+                </label>
+                <select id="three" style="height: 30px; opacity: 0.9;">
+                <option class="icon-dot" style="color: #090909; font-size: 16px;opacity: 0.3;"
+                        value="watershed_area">子流域面积
+                </option>
+                <option class="icon-dot" style="color: #090909; font-size: 16px; opacity: 0.3;"
+                        value="watershed_flow">流量输出
+                </option>
+                <option class="icon-dot" style="color: #090909; font-size: 16px; opacity: 0.3;"
+                        value="Nitrogen_phosphorus">
+                    氮磷输出
+                </option>
+            </select>
+
+                <div id="RCH1" class="chart" style="width: 600px; height: 500px">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/js/hot.js"></script>
+</body>
+
+</html>

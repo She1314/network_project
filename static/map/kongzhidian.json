@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.22984365016785,
+          32.41521263448794
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 11
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.20720077176088,
+          32.37873690292693
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 19
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.11721743939866,
+          32.3801631452671
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 38
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.11846741855733,
+          32.31034108695444
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 57
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.08990402009374,
+          32.30134242920367
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 58
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.07133565924677,
+          32.42471527404187
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.11177871632563,
+          32.42406650133182
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 16
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.18097439617814,
+          32.416575190499756
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.06143653951274,
+          32.450455942109436
+        ]
+      },
+      "properties": {
+        "Id": 0,
+        "SUBBASIN": 1
+      }
+    }
+  ]
+}
